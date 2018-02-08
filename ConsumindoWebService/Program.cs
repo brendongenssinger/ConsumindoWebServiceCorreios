@@ -41,12 +41,8 @@ namespace ConsumindoWebService
         {
             using (var ws = new ServiceClient())
             {
-                ws.Open();
-                ws.Endpoint.Behaviors.Add();
-                //                var resposta = ws.buscaEventos("ECT", "SRO", "L", "", "001", "PL544730466BR");
-
-
-
+                var resposta = ws.buscaEventos("ECT","SRO","L","T","101","PL544730466BR");
+                Console.WriteLine(resposta);
             }
             Console.ReadKey();
         }
